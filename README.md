@@ -1,4 +1,4 @@
-# Tafelbeest
+# Rekenbeest
 
 Offline-first Dutch multiplication practice for primary-school children. Built as a lightweight web app and Android WebView APK.
 
@@ -28,7 +28,7 @@ In the GitHub repository, open **Settings → Secrets and variables → Actions*
 - `TAFELBEEST_KEY_ALIAS`: `tafelbeest`
 - `TAFELBEEST_KEY_PASSWORD`: the key password
 
-Then open **Actions → Build Tafelbeest APK → Run workflow**. Download the `tafelbeest-release-apk` artifact from the completed run and install `app-release.apk`.
+Then open **Actions → Build Rekenbeest APK → Run workflow**. Download the `rekenbeest-release-apk` artifact from the completed run and install `app-release.apk`.
 
 Every build gets a higher Android version code, and all builds use the same signing key.
 
