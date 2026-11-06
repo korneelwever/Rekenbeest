@@ -1,4 +1,4 @@
-name: Build Tafelbeest APK
+name: Build Rekenbeest APK
 on:
   workflow_dispatch:
   push:
@@ -53,5 +53,5 @@ jobs:
           "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$APK"
       - uses: actions/upload-artifact@v4
         with:
-          name: tafelbeest-release-apk
+          name: rekenbeest-release-apk
           path: android/app/build/outputs/apk/release/app-release.apk
