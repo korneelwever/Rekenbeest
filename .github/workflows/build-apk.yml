@@ -1,4 +1,4 @@
-.name: Build Tafelbeest APK
+name: Build Tafelbeest APK
 on:
   workflow_dispatch:
   push:
