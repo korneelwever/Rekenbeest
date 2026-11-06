@@ -1,4 +1,5 @@
 package nl.korneel.tafelbeest;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Build;
@@ -15,12 +16,18 @@ public class MainActivity extends Activity {
     window.setStatusBarColor(0xFF101827);
     window.setNavigationBarColor(0xFF101827);
     if (Build.VERSION.SDK_INT >= 29) window.setNavigationBarContrastEnforced(false);
+    if (Build.VERSION.SDK_INT >= 30) window.setDecorFitsSystemWindows(false);
+
     WebView web = new WebView(this);
     web.setBackgroundColor(0xFF101827);
     web.setOnApplyWindowInsetsListener((view, insets) -> {
-      int top, bottom;
+      int top;
+      int bottom;
       if (Build.VERSION.SDK_INT >= 30) {
-        android.graphics.Insets bars = insets.getInsets(WindowInsets.Type.statusBars() | WindowInsets.Type.navigationBars());
+        android.graphics.Insets bars = insets.getInsets(
+          WindowInsets.Type.statusBars() | WindowInsets.Type.navigationBars()
+            | WindowInsets.Type.displayCutout()
+        );
         top = bars.top;
         bottom = bars.bottom;
       } else {
