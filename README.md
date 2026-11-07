@@ -43,3 +43,15 @@ The app stores progress locally on the device. No account or internet connection
 Each player has a school group and separate difficulty levels for addition, subtraction and multiplication. School group selects sensible starting levels, which can then be changed independently from the home screen. Arithmetic levels cover number ranges and whether a question crosses a ten or requires borrowing. Multiplication levels unlock table groups progressively. Existing player profiles and multiplication mastery are retained when the app is updated.
 
 Each multiplication fact is tracked separately. Incorrect answers reduce mastery and increase future practice frequency. Correct but slow answers also count as not-yet-automatic, while fast correct answers build mastery. The app tracks average response time and uses weighted selection to bring weaker facts back more often.
+
+
+## Install as a web app
+
+The repository root is a static PWA and can be deployed directly to any HTTPS static host, including Vercel. No build command or framework preset is required.
+
+- English browser/device language selects the **Math Monster** install name.
+- Other languages default to **Rekenbeest**.
+- On iPhone or iPad, open the HTTPS site in Safari, choose **Share → Add to Home Screen**, then enable **Open as Web App**.
+- The service worker caches the app shell and assets so the game can start offline after the first successful visit.
+
+The current game interface and questions are still Dutch. The localized install name does not translate the game itself.
