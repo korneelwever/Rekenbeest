@@ -1,14 +1,13 @@
 # Rekenbeest
 
 Offline-first Dutch maths practice for primary-school children, with player-specific levels for addition, subtraction and multiplication. Built as a lightweight web app and Android WebView APK.
-Available directly at mathsmonster.vercel.app
+Available directly at [mathsmonster.vercel.app](https://mathsmonster.vercel.app) which allows installing as PWA as well.
 
 ## Learning approach
 
 Each player has a school group and separate difficulty levels for addition, subtraction and multiplication. School group selects sensible starting levels, which can then be changed independently from the home screen. Arithmetic levels cover number ranges and whether a question crosses a ten or requires borrowing. Multiplication levels unlock table groups progressively. Existing player profiles and multiplication mastery are retained when the app is updated.
 
 Each multiplication fact is tracked separately. Incorrect answers reduce mastery and increase future practice frequency. Correct but slow answers also count as not-yet-automatic, while fast correct answers build mastery. The app tracks average response time and uses weighted selection to bring weaker facts back more often.
-
 
 ## Install as a web app
 
