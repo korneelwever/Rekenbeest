@@ -3,12 +3,9 @@
 <meta name="theme-color" content="#101827"><meta name="application-name" content="Rekenbeest">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Rekenbeest">
-<link rel="manifest" id="appManifest" href="./manifest.nl.webmanifest">
-<link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="./assets/icon-512.png">
 <title>Rekenbeest</title>
 <script>
-(()=>{const english=/^en(?:-|$)/i.test(navigator.language||"");const name=english?"Math Monster":"Rekenbeest";const locale=english?"en":"nl";const link=document.getElementById("appManifest");if(link)link.href="./manifest."+locale+".webmanifest";document.title=name;const appName=document.querySelector('meta[name="application-name"]');if(appName)appName.content=name;const appleName=document.querySelector('meta[name="apple-mobile-web-app-title"]');if(appleName)appleName.content=name;})();
+(()=>{const hosted=location.protocol==="https:"||location.hostname==="localhost";if(!hosted)return;const english=/^en(?:-|$)/i.test(navigator.language||"");const name=english?"Math Monster":"Rekenbeest";const locale=english?"en":"nl";const manifest=document.createElement("link");manifest.rel="manifest";manifest.href="./manifest."+locale+".webmanifest";document.head.appendChild(manifest);const icon=document.createElement("link");icon.rel="icon";icon.href="./assets/icon.svg";icon.type="image/svg+xml";document.head.appendChild(icon);const appleIcon=document.createElement("link");appleIcon.rel="apple-touch-icon";appleIcon.href="./assets/icon-512.png";document.head.appendChild(appleIcon);document.title=name;const appName=document.querySelector('meta[name="application-name"]');if(appName)appName.content=name;const appleName=document.querySelector('meta[name="apple-mobile-web-app-title"]');if(appleName)appleName.content=name;})();
 </script>
 <script>
 if("serviceWorker" in navigator && (location.protocol==="https:" || location.hostname==="localhost")){window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js").catch(error=>console.warn("PWA offline support could not be registered",error)));}
